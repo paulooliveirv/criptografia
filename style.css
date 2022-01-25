@@ -140,4 +140,9 @@ footer {
     position: fixed;
     bottom:1%;
     left:20%;
+    font-family: monospace;
+}
+#link-github{
+    color: rgb(0, 255, 76);
+    font-size: 1.1rem;
 }
