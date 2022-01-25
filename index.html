@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <title>Criptografando</title>
+</head>
+<body>
+    <div id='fundoMatrix'>
+        <canvas id='canvas1'></canvas>
+        <canvas id= 'canvas2'></canvas>
+    </div>
+    <main id="principal">
+        <h1>Criptografando</h1>
+        <p>Vamos usar esse programinha para codificar o que for inserido na caixa abaixo. Você pode escolher entre a <b>Cifra de Cesar</b> que é uma das mais simples formas de codificação bastante usada por Júlio César no império Romano. Ou, se preferir, nos podemos te dar o Resultado em <b>Base64</b> base essa que é uma forma de criptografar dados usada inclusive na URL do seu navegador.</p>
+        <p>Escolha abaixo qual será a codificação</p>
+        <!-- Escolhas entre cifra de César e Base 64-->
+        <fieldset id="comeco">
+            <select id="selecaoPrincipal" name="selecaoPrincipal">
+                <option value disabled selected>Clique para selecionar</option> 
+                <option value = "base64" id="base64">Base 64</option>
+                <option value="cesar" id="cesar">Cifra de César</option>
+            </select>
+        </fieldset>
+
+        <!--input none para dizer qual o número que será incrementado a base de césar --> 
+        <div id="entradaCesar">
+            <p class = 'numeroCasasPular'>Quantas casas iremos  pular?</p>
+            <br>
+            <input id='numeroEntradaCesar' type="number" value='1' >
+        </div>
+
+        <p>E o que você quer fazer?</p>
+        <div id='inputs'>
+            <input type="radio" id="codificar" name='btn'>
+            <label  id= "codificando"for="codificar">Codificar</label>
+            <input type="radio" id="decodificar" name='btn'>
+            <label id="decodificando" for="decodificar">Decodificar</label>
+        </div>
+        <input type="text" name="mensagem" id="caixa-texto" placeholder='Digite o texto para codificação aqui'>
+
+        <p id='paragrafoCodificado'>Texto codificado: </p>
+        <textarea id="caixaResultadoTexto" readonly rows="100" cols="50" name="mensagemCodificada"></textarea>
+
+        <div>
+            <button id="codificarMensagem" type='button'>Codificar mensagem</button>
+            <button id="codificarCesar" type='button'>Codificar mensagem</button>
+            <button id="decodificarMensagem" type='button'>Decodificar mensagem</button>
+            <button id="decodificar64" type='button'>Decodificar mensagem</button>
+            <button href="index.html" id='voltaTudo' type = 'button'><a href="index.html">Tentar novamente</a></button>
+
+        </div>
+        <footer> <p>Criado para fins educacionais por Paulo Reis</p> </footer>
+    </main>
+    <script src="index.js"></script>
+    <script src="matrix.js"></script>
+</body>
+</html>

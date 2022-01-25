@@ -1,0 +1,143 @@
+
+body{
+    display: flex;
+    overflow: hidden;
+    max-width: 1366px;
+    max-height:  768px;
+    font-family: monospace;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    background-color: black;
+}
+body > main{
+    margin: 0 auto;
+}
+h1, p{
+    font-family: monospace;
+}
+
+#fundoMatrix{
+    position: absolute;
+    z-index: 0;
+}
+
+#principal{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    background-color: rgba(255, 255,255, 0.100);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(15px);
+    overflow: hidden;
+    height: 860px;
+    margin: 2rem 0rem 2rem 35rem;
+    border-radius: 20px;
+
+}
+
+h1{
+    font-size: 3.2rem;
+    margin-top: 1.3rem;
+    padding-bottom: 2rem;
+}
+
+p{
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 1rem 1.8rem 1rem;
+    line-height: 1.6rem;
+}
+
+#selecaoPrincipal{
+    width: 20rem;
+    height: 2.5rem;
+    font-size: 1.1rem;
+    text-align: center;
+    border-radius: 20px;
+    font-family: monospace;
+    font-weight: bold;
+}
+#entradaCesar{
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+}
+#entradaCesar{
+    padding: 0px;
+}
+.numeroCasasPular{
+    padding-top: 0.9rem;
+    padding-bottom: 0px;
+}
+#labelForCesar{
+    font-size: 1rem;
+}
+#numeroEntradaCesar{
+    padding-top: 0.6rem;
+    border-radius: 15px;
+    border-style: none;
+    text-align: center;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+#inputs{
+    padding-bottom: 1rem;
+}
+#caixa-texto{
+    width: 20rem;
+    height: 4rem;
+    text-align: initial;
+    border-style: none;
+    border-radius: 20px;
+    text-align: center;
+}
+
+
+#codificar, #decodificar, #decodificar64{
+    width: 1rem;
+}
+
+#codificando, #decodificando{
+    font-size: 0.9rem;
+}
+#caixaResultadoTexto{
+    width: 19rem;
+    height: 6rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+}
+#entradaCesar, #voltaTudo, #caixaResultadoTexto, #paragrafoCodificado{
+    display: none;
+}
+
+button,  #decodificar64{
+    display: none;
+    font-weight: bold;
+    font-family: monospace;
+    border-radius: 8px;
+    border-style: none;
+    width: 12rem;
+    height: 2.5rem;
+    margin-top: 1rem;
+    padding-left:1.9rem ;
+    padding-top: 0.6rem;
+}
+
+a{
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-size: 0.9rem;
+}
+#selecaoPrincipal, #codificar, #decodificar, #paragrafoCodificado, #decodificar64{
+    cursor: pointer;
+}
+
+footer {
+    position: fixed;
+    bottom:1%;
+    left:20%;
+}
