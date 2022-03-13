@@ -27,15 +27,16 @@ escolhas.addEventListener('click', function(){
 // Caixas adicionando botões  para input\\
 codificarRadio.addEventListener('click', function(){
   
-    if(codificarRadio.checked && escolhas.value === 'cesar'){
+    if(escolhas.value === 'cesar' && codificarRadio.checked){
       document.getElementById("caixa-texto").placeholder = "Digite o texto para codificar";
       btnCodificarCesar.style.display = 'flex';
       btnDecodificar.style.display = 'none';
     }
-    else if(codificarRadio.checked && escolhas.value === 'base64'){
+    else if(escolhas.value === 'base64' && codificarRadio.checked){
       document.getElementById("caixa-texto").placeholder = "Digite o texto para codificar";
       btnDecodificar.style.display = 'none';
       btnCodificar.style.display = "flex";
+      btnDecodificar64.style.display = 'none';
     }
 
     else{
@@ -47,11 +48,14 @@ decodificarRadio.addEventListener('click', function(){
     if(decodificarRadio.checked && escolhas.value === 'base64'){
       btnDecodificar64.style.display = 'flex';
       document.getElementById("caixa-texto").placeholder = "Digite o texto para decodificar";
+      btnCodificar.style.display = "none";
+
     }
     else if(decodificarRadio.checked && escolhas.value === 'cesar'){
       document.getElementById("caixa-texto").placeholder = "Digite o texto para decodificar";
       btnDecodificar.style.display = 'flex';
       btnCodificar.style.display = "none";
+      btnCodificarCesar.style.display = 'none';
     }
     else{
       caixaFinal.style.display = "none";
@@ -159,7 +163,7 @@ btnDecodificar.addEventListener('click',function descodandoCesar() {
 
 
 // ********************************************* \\
- 
+
 
 // função que codifica em Cesar;
 
